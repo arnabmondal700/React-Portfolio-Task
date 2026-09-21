@@ -1,32 +1,17 @@
-import { defineConfig, transformWithEsbuild } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-
-const jsxInJsPlugin = () => ({
-  name: 'jsx-in-js',
-  enforce: 'pre',
-  async transform(code, id) {
-    if (id.includes('node_modules') || !id.endsWith('.js')) {
-      return null
-    }
-
-    return transformWithEsbuild(code, id, {
-      loader: 'jsx',
-      jsx: 'automatic',
-    })
-  },
-})
-
 export default defineConfig({
-  plugins: [jsxInJsPlugin(), react()],
-  // Tells the dependency pre bundler how to parse the same `.js` modules.
+  plugins: [react({ include: /\.(js|jsx)$/ })],
+  esbuild: {
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: [],
+  },
   optimizeDeps: {
     esbuildOptions: {
       loader: { '.js': 'jsx' },
     },
   },
-  server: {
-    port: 3000,
-    open: false,
-  },
+  server: { port: 3000 },
 })

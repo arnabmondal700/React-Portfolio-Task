@@ -1,6 +1,3 @@
-/**
- * Content for the highlighted projects grid (rendered as a 2x2 grid).
- */
 const projects = [
   {
     title: 'React Landing Page',
