@@ -8,35 +8,29 @@ const shouldFail = (data) =>
 export const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const submit = async (url, data) => {
-    setLoading(true);
+    setIsLoading(true);
 
-    setResponse(null);
+    await wait(1000);
 
-    try {
-      console.log(data);
+    const isSuccess = Math.random() >= 0.5;
 
-      if (shouldFail(data)) {
-        setResponse({
-          type: 'error',
-          message: 'Something went wrong, please try again later!',
-        });
-      } else {
-        setResponse({
-          type: 'success',
-          message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`,
-        });
-      }
-    } catch (error) {
+    if (isSuccess) {
+      setResponse({
+        type: 'success',
+        message: `Thanks for contacting me, ${data.firstName}!`,
+      });
+    } else {
       setResponse({
         type: 'error',
-        message: 'Something went wrong, please try again later!',
+        message: 'Something went wrong. Please try again.',
       });
-    } finally {
-      setLoading(false)
     }
-  }
+
+    setIsLoading(false);
+  };
 
   return { isLoading, response, submit };
 }
