@@ -18,7 +18,6 @@ export const useSubmit = () => {
       console.log(data);
 
       if (shouldFail(data)) {
-        console.log(data);
         setResponse({
           type: 'error',
           message: 'Something went wrong, please try again later!',
