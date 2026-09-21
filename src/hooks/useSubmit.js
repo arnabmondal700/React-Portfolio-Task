@@ -1,9 +1,6 @@
 import { useState } from 'react';
 
 
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-
 const shouldFail = (data) =>
   typeof data?.comment === 'string' &&
   data.comment.toLowerCase().includes('fail');
@@ -19,7 +16,6 @@ export const useSubmit = () => {
 
     try {
       console.log(data);
-      await wait(2000)
 
       if (shouldFail(data)) {
         console.log(data);

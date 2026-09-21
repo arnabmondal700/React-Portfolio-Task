@@ -1,29 +1,29 @@
 const projects = [
   {
-    title: 'React Landing Page',
+    title: 'React Space',
     description:
-      'A responsive marketing landing page built with React and Chakra UI, featuring smooth scroll animations and a fully accessible navigation bar.',
+      'Handy tool belt to create amazing AR components in a React app, with redux integration via middleware',
     imageSrc: '/images/project-1.svg',
     url: "https://github.com/",
   },
   {
-    title: 'Weather Dashboard',
+    title: 'React Infinite Scroll',
     description:
-      'A weather dashboard consuming a public REST API. Displays current conditions and a seven day forecast with graceful loading and error states.',
+      'A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land',
     imageSrc: '/images/project-2.svg',
     url: "https://github.com/",
   },
   {
-    title: 'Task Manager',
+    title: 'Photo Gallery',
     description:
-      'A drag and drop task manager with optimistic updates, keyboard shortcuts and offline persistence backed by the browser local storage API.',
+      'A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income',
     imageSrc: '/images/project-3.svg',
     url: "https://github.com/",
   },
   {
-    title: 'Component Library',
+    title: 'Event planner',
     description:
-      'An accessible component library documented with Storybook. Every widget ships with unit tests and is verified against the WCAG contrast rules.',
+      'A mobile application for leisure seekers to discover unique events and activities in their city with a few taps',
     imageSrc: '/images/project-4.svg',
     url: "https://github.com/",
   },
