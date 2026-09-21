@@ -9,22 +9,22 @@ import {
 const socials = [
   {
     name: 'GitHub',
-    url: 'https://github.com/',
+    url: "https://github.com/",
     icon: faGithub,
   },
   {
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/',
+    url: "https://www.linkedin.com/",
     icon: faLinkedin,
   },
   {
     name: 'Medium',
-    url: 'https://medium.com/',
+    url: "https://medium.com/",
     icon: faMedium,
   },
   {
     name: 'Stack Overflow',
-    url: 'https://stackoverflow.com/',
+    url: "https://stackoverflow.com/",
     icon: faStackOverflow,
   },
 ]

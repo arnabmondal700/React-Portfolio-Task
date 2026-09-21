@@ -3,24 +3,24 @@ import { createContext, useContext, useState } from 'react'
 const AlertContext = createContext({
   isOpen: false,
   type: 'success',
-  message: '',
+  message: "",
   onOpen: () => {},
   onClose: () => {},
 })
 
 export const AlertProvider = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [type, setType] = useState('success')
-  const [message, setMessage] = useState('')
+  const [isOpen, setIsOpen] = useState(false);
+  const [type, setType] = useState('success');
+  const [message, setMessage] = useState('');
 
   const onOpen = (type, message) => {
-    setType(type)
-    setMessage(message)
-    setIsOpen(true)
+    setType(type);
+    setMessage(message);
+    setIsOpen(true);
   }
 
   const onClose = () => {
-    setIsOpen(false)
+    setIsOpen(false);
   }
 
   return (
@@ -32,6 +32,6 @@ export const AlertProvider = ({ children }) => {
   )
 }
 
-export const useAlertContext = () => useContext(AlertContext)
+export const useAlertContext = () => useContext(AlertContext);
 
-export default AlertContext
+export default AlertContext;

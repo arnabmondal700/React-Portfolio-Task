@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 import {
   AlertDialog,
   AlertDialogBody,
@@ -7,14 +7,14 @@ import {
   AlertDialogHeader,
   AlertDialogOverlay,
   Button,
-} from '@chakra-ui/react'
-import { useAlertContext } from '../context/AlertContext'
+} from '@chakra-ui/react';
+import { useAlertContext } from '../context/AlertContext';
 
 const Alert = () => {
-  const { isOpen, type, message, onClose } = useAlertContext()
-  const cancelRef = useRef(null)
+  const { isOpen, type, message, onClose } = useAlertContext();
+  const cancelRef = useRef(null);
 
-  const isSuccess = type === 'success'
+  const isSuccess = type === "success"
 
   return (
     <AlertDialog

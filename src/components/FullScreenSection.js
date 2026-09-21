@@ -1,4 +1,4 @@
-import { VStack } from '@chakra-ui/react'
+import { VStack } from '@chakra-ui/react';
 
 
 const FullScreenSection = ({
@@ -14,7 +14,7 @@ const FullScreenSection = ({
     justifyContent="center"
     alignItems="center"
     backgroundColor={isDarkBackground ? '#1A202C' : '#F7FAFC'}
-    color={isDarkBackground ? '#FFFFFF' : '#1A202C'}
+    color={isDarkBackground ? "#FFFFFF" : "#1A202C"}
     {...boxProps}
   >
     {children}

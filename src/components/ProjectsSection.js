@@ -1,7 +1,7 @@
-import { Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react'
-import FullScreenSection from './FullScreenSection'
-import Card from './Card'
-import projects from '../data/projects'
+import { Heading, SimpleGrid, Text, VStack } from '@chakra-ui/react';
+import FullScreenSection from './FullScreenSection';
+import Card from './Card';
+import projects from '../data/projects';
 
 const ProjectsSection = () => (
   <FullScreenSection
@@ -35,4 +35,4 @@ const ProjectsSection = () => (
   </FullScreenSection>
 )
 
-export default ProjectsSection
+export default ProjectsSection;

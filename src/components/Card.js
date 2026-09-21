@@ -1,6 +1,6 @@
-import { Heading, HStack, Image, Link, Text, VStack } from '@chakra-ui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { Heading, HStack, Image, Link, Text, VStack } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Card = ({ title, description, imageSrc, url }) => (
   <VStack
@@ -41,4 +41,4 @@ const Card = ({ title, description, imageSrc, url }) => (
   </VStack>
 )
 
-export default Card
+export default Card;

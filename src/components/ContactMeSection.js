@@ -37,13 +37,14 @@ const ContactMeSection = () => {
 
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      email: '',
+      firstName: "",
+      email: "",
       type: 'hireMe',
-      comment: '',
+      comment: "",
     },
     onSubmit: (values) => {
-      submit('/api/contact', values)
+      console.log(values);
+      submit('/api/contact', values);
     },
     validationSchema,
   })

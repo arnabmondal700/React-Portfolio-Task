@@ -1,46 +1,46 @@
-import { useEffect, useRef } from 'react'
-import { Box, HStack, Link } from '@chakra-ui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import socials from '../data/socials'
+import { useEffect, useRef } from 'react';
+import { Box, HStack, Link } from '@chakra-ui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import socials from '../data/socials';
 
 const Header = () => {
 
-  const headerRef = useRef(null)
+  const headerRef = useRef(null);
 
   useEffect(() => {
-    let prevScrollPos = window.scrollY
+    let prevScrollPos = window.scrollY;
 
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY
-      const headerElement = headerRef.current
+      const currentScrollPos = window.scrollY;
+      const headerElement = headerRef.current;
 
       if (!headerElement) {
-        return
+        return;
       }
 
       if (prevScrollPos > currentScrollPos) {
-        headerElement.style.transform = 'translateY(0)'
+        headerElement.style.transform = 'translateY(0)';
       } else {
-        headerElement.style.transform = 'translateY(-200px)'
+        headerElement.style.transform = 'translateY(-200px)';
       }
 
       prevScrollPos = currentScrollPos
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll);
     }
   }, [])
 
   const handleClick = (anchor) => (event) => {
-    event.preventDefault()
-    const id = `${anchor}-section`
-    const element = document.getElementById(id)
+    event.preventDefault();
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
 
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 

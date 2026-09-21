@@ -1,9 +1,9 @@
-import { Avatar, Heading, Text, VStack } from '@chakra-ui/react'
-import FullScreenSection from './FullScreenSection'
+import { Avatar, Heading, Text, VStack } from '@chakra-ui/react';
+import FullScreenSection from './FullScreenSection';
 
-const greeting = 'Hello, I am Arnab!'
-const bio1 = 'A frontend developer'
-const bio2 = 'specialized in React'
+const greeting = 'Hello, I am Arnab!';
+const bio1 = 'A frontend developer';
+const bio2 = 'specialized in React';
 
 const LandingSection = () => (
   <FullScreenSection id="landing-section" isDarkBackground>
@@ -24,4 +24,4 @@ const LandingSection = () => (
   </FullScreenSection>
 )
 
-export default LandingSection
+export default LandingSection;
